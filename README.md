@@ -4,7 +4,7 @@ This repository is created alongside the following [YouTube Tutorial](https://yo
 
 ## Demo
 
-[https://tc-search-meals.netlify.app](https://vuejs-meals.netlify.app/)
+[https://vuejs-meals.netlify.app](https://vuejs-meals.netlify.app/)
 
 ## Installation
 
