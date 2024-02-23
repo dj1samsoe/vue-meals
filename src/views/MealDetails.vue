@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-[800px] mx-auto p-8">
-    <h1 class="text-4xl font-bold mb-5 text-neutral-500">{{ meal.strMeal }}</h1>
+  <Hero :title="meal.strMeal" />
+  <div class="max-w-[800px] mx-auto p-8 pt-24">
     <img
       :src="meal.strMealThumb"
       :alt="meal.strMeal"
@@ -61,6 +61,7 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import axiosClient from "../axiosClient";
 import YouTubeButton from "../components/YouTubeButton.vue";
+import Hero from "../components/Hero.vue";
 
 const route = useRoute();
 const meal = ref({});

@@ -1,25 +1,28 @@
 <template>
+  <Hero :title="title" />
   <div class="p-8 pb-0">
-    <h1 class="text-4xl font-bold mb-4 text-neutral-500">Ingredients</h1>
+    <h1 class="text-4xl font-bold mb-4 text-neutral-900 text-center">
+      Ingredients
+    </h1>
   </div>
-  <div class="px-8">
+  <div class="flex justify-center pb-5">
     <input
       type="text"
       v-model="keyword"
-      class="rounded border-2 bg-white border-gray-200 focus:ring-neutral-500 focus:border-neutral-500 mb-3 w-full"
+      class="rounded border-2 bg-white border-gray-200 focus:ring-neutral-500 focus:border-neutral-500 mb-3 w-full max-w-[500px]"
       placeholder="Search for Ingredients"
     />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-      <a
-        href="#"
-        @click.prevent="openIngredient(ingredient)"
-        v-for="ingredient of computedIngredients"
-        :key="ingredient.idIngredient"
-        class="block bg-white rounded p-3 mb-3 shadow"
-      >
-        <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
-      </a>
-    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 px-8">
+    <a
+      href="#"
+      @click.prevent="openIngredient(ingredient)"
+      v-for="ingredient of computedIngredients"
+      :key="ingredient.idIngredient"
+      class="block bg-white rounded p-3 mb-3 shadow"
+    >
+      <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
+    </a>
   </div>
 </template>
 
@@ -29,6 +32,9 @@ import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import axiosClient from "../axiosClient";
 import store from "../store";
+import Hero from "../components/Hero.vue";
+
+const title = "Ingredients";
 
 const router = useRouter();
 const keyword = ref("");

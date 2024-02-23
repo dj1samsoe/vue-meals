@@ -1,7 +1,9 @@
 <template>
-  <header class="bg-white shadow h-16 flex justify-between items-stretch">
+  <header
+    class="bg-white shadow-md h-16 fixed w-full z-50 flex justify-between items-stretch px-8"
+  >
     <h1 class="flex items-center text-3xl font-bold">
-      Meals <span class="text-red-500">Vue.js</span>
+      Meals <span class="text-neutral-500">Vue.js</span>
     </h1>
     <div class="flex items-center gap-1">
       <router-link

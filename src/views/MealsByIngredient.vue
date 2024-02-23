@@ -1,10 +1,5 @@
 <template>
-  <div class="p-8 pb-0">
-    <h1 class="text-4xl font-bold mb-4 text-neutral-500">
-      Meals for {{ ingredient.strIngredient }}
-    </h1>
-  </div>
-
+  <Hero :title="ingredient.strIngredient" />
   <Meals :meals="meals" />
 </template>
 
@@ -14,10 +9,12 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
 import Meals from "../components/Meals.vue";
+import Hero from "../components/Hero.vue";
 
 const route = useRoute();
 const ingredient = computed(() => store.state.ingredient);
 const meals = computed(() => store.state.mealsByIngredient);
+// const title = "Meals for : " + ingredient.value.strIngredient;
 
 onMounted(() => {
   store.dispatch("searchMealsByIngredient", route.params.ingredient);
