@@ -4,7 +4,7 @@ This repository is created alongside the following [YouTube Tutorial](https://yo
 
 ## Demo
 
-[https://vuejs-meals.netlify.app](https://vuejs-meals.netlify.app/)
+[https://meals-vuejs.vercel.app](https://meals-vuejs.vercel.app/)
 
 ## Installation
 
